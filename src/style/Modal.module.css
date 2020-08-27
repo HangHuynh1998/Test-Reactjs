@@ -1,0 +1,17 @@
+.ButtonA {
+    color: #46139f!important;
+    background-color: #fff;
+    margin-right: 0.5rem!important;
+  }
+  
+  .ButtonB {
+    color: #ff7f50!important;
+  }
+  
+  .ButtonC {
+    background-color: #fff!important;
+    border-color: #46139f!important;
+    color: #46139f!important;
+    margin-left: 0.5rem!important;
+  }
+  
