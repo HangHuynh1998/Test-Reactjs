@@ -9,10 +9,12 @@ import {COUNTRY_ALL,COUNTRY_US} from "./store/actions/actionTypes"
 function App() {
   const [showContacts, setShowContacts] = useState(true)
   const [showContactDetail, setShowContactDetail] = useState(false)
-  
-  const onSelectedActiveContact = () => {
+  const [activeContact, setActiveContact] = useState(null)
+
+  const onSelectedActiveContact = (contact) => {
     console.log("onSelectedActiveContact");
     setShowContacts(false)
+    setActiveContact(contact)
     setShowContactDetail(true)
   }
 
