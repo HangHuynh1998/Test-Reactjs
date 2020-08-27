@@ -13,6 +13,7 @@ const getContacts=(state, action)=>{
 const getContactsSuccess=(state,action)=>{
     return{
         ...state,
+        data: [...state.data, ...action.payload],
         loading:false
     }
 }
