@@ -12,19 +12,18 @@ function App() {
   const [activeContact, setActiveContact] = useState(null)
 
   const onSelectedActiveContact = (contact) => {
-    console.log("onSelectedActiveContact");
     setShowContacts(false)
     setActiveContact(contact)
     setShowContactDetail(true)
   }
 
   const onCloseDetail = () => {
-    console.log("onCloseDetail");
     setShowContactDetail(false)
     setShowContacts(true)
   }
   return (
     <BrowserRouter>
+    {console.log("activeContact",activeContact)}
       <Container className="text-center">
         <Link to="/all-contacts">
           <Button variant="primary" className={classes.ButtonA}>
@@ -34,8 +33,8 @@ function App() {
         <Link to="/us-contacts">
           <Button className={classes.ButtonB}>US Contacts</Button>
         </Link>
-        <Contact showContactDetail={showContactDetail} onCloseContact={onCloseDetail} /> 
-        <Switch>
+  {activeContact&&<Contact contact={activeContact} showContactDetail={showContactDetail} onCloseContact={onCloseDetail} /> }
+          <Switch>
           <Route
             exact
             path="/all-contacts"

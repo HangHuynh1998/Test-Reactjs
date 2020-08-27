@@ -9,10 +9,11 @@ const Contact = ({contact, showContactDetail, onCloseContact}) => {
             </Modal.Header>
             <Modal.Body>
                 <div>
-                  <p><strong>id:</strong> 1</p>
-                  <p><strong>Full name:</strong> ABC XYZ</p>
-                  <p><strong>email:</strong> test1@test</p>
-                  <p><strong>Phone number:</strong>0123456789</p>
+                  {console.log("contact",contact)}
+                  <p><strong>id:</strong>{contact.id}</p>
+                  <p><strong>Full name:</strong> {contact.first_name} {contact.last_name}</p>
+                  <p><strong>email:</strong> {contact.email}</p>
+                  <p><strong>Phone number:</strong>{contact.phone_number}</p>
                 </div>
             </Modal.Body>
             <Modal.Footer className="d-flex justify-content-between">

@@ -59,6 +59,7 @@ const Contacts = ({countryId, title, showContacts,
         <CustomScrollbars onReachedBottom={onReachedToBottom} style={{height: 300}}>
           { contactsData.map( (contact, id) => 
           ( <div key={id} className="d-flex" onClick={() => selectActiveContact(contact)} >
+            {console.log("CONTACTS",contact)}
               <p className="mr-3">{contact.id}</p>
               <p className="mr-3"><strong>{contact.first_name} {contact.last_name}</strong></p>
               <p className="mr-3">{contact.email}</p>
