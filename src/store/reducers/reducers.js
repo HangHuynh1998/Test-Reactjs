@@ -1,10 +1,10 @@
-import filterDadta from './filterData'
-import contactData from './contactData'
-import { combineReducers } from 'redux'
+import filterDadta from "./filterData";
+import contactData from "./contactData";
+import { combineReducers } from "redux";
 
 const reducers = combineReducers({
   filter: filterDadta,
-  contacts: contactData
-})
+  contacts: contactData,
+});
 
-export default reducers
+export default reducers;
