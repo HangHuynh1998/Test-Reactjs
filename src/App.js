@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import { Container, Button } from "react-bootstrap";
-import ContactModal from "./component/ContactModal";
 import classes from "./style/Modal.module.css";
 import Contact from "./component/Contact";
 import { useState } from "react";
 import Contacts from "./component/Contacts";
+import {COUNTRY_ALL,COUNTRY_US} from "./store/actions/actionTypes"
 function App() {
   const [showContacts, setShowContacts] = useState(true)
   const [showContactDetail, setShowContactDetail] = useState(false)
@@ -39,14 +39,14 @@ function App() {
             path="/all-contacts"
             
           >
-            <Contacts showContacts={showContacts} selectActiveContact={onSelectedActiveContact} />
+            <Contacts title="All Contacts" countryId={COUNTRY_ALL} showContacts={showContacts} selectActiveContact={onSelectedActiveContact} />
           </Route>
           <Route
             exact
             path="/us-contacts"
             
           >
-            <Contacts showContacts={showContacts} selectActiveContact={onSelectedActiveContact} />
+            <Contacts title="US Contacts" countryId={COUNTRY_US} showContacts={showContacts} selectActiveContact={onSelectedActiveContact} />
           </Route>
         </Switch>
       </Container>
